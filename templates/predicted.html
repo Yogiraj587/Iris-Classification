@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicted output</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/image-design.css') }}">
+</head>
+<body bgcolor=#a3cfb4>
+    <center>
+        <h1> PREDICTION: </h1>
+    {%if pred == 0%}
+        <h1>Iris-Setosa</h1>
+        <img src="static/Irissetosa1.jpg" alt="/">
+     
+    {%elif pred == 1%}
+        <h1>Iris-Versicolor</h1>
+        <img src="static/iris versicolor.jfif" alt="/">
+    
+    {%else%}
+        <h1>Iris-Virginica</h1>
+        <img src="static/iris virginica.jpg" alt="/">
+    {%endif%}
+
+        <br><br>
+    <a href='/'>Go back to home page</a>
+
+    </center>
+
+
+</body>
+</html>

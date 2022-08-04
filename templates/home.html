@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Flower Classification</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/design.css') }}">
+</head>
+<body>
+    <h1>Welcome to Iris Flower Classifier</h1>
+    <div class="form">
+        <form method="POST", action="{{url_for('predict')}}">
+        <label for="Sepal Length">Sepal Length</label>
+        <input type="text" name="Sepal length" id="sepal_length", placeholder="Enter"><br>
+        <label for="Sepal Width">Sepal Width</label> 
+        <input type="text" name="Sepal width" id="sepal_width", placeholder="Enter"><br>
+        <label for="Petal Length">Petal Length</label>
+        <input type="text" name="Petal length" id="petal_length", placeholder="Enter"><br>
+        <label for="Petal Width">Petal Width</label>
+        <input type="text" name="Petal width" id="petal_width", placeholder="Enter"><br>
+        <input type="submit" , value="predict">
+        </form>
+    </div>
+    <img src="static/iris.jpg" alt="Not found">
+</body>
+</html>
